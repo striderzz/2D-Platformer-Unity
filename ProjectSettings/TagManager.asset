@@ -50,6 +50,12 @@ TagManager:
   - name: Props
     uniqueID: 3589227467
     locked: 0
+  - name: dynamicprops
+    uniqueID: 4206202555
+    locked: 0
+  - name: pickup
+    uniqueID: 1949001141
+    locked: 0
   - name: Platform
     uniqueID: 3300334483
     locked: 0

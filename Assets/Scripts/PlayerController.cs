@@ -48,10 +48,6 @@ public class PlayerController : MonoBehaviour
                 moveX = Input.GetAxis("Horizontal");
             }
 
-            if (moveX != 0)
-            {
-                FlipSprite(moveX);
-            }
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -77,6 +73,11 @@ public class PlayerController : MonoBehaviour
             // ... (your existing code for rotation)
         }
         SetAnimations();
+
+        if (moveX != 0)
+        {
+            FlipSprite(moveX);
+        }
     }
     public void SetAnimations()
     {
