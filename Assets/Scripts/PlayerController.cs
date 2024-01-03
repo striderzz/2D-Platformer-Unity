@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
 
     private Rigidbody2D rb;
-    private bool isGrounded = false;
+    private bool isGroundedBool = false;
     private bool canDoubleJump = false;
 
     public Animator playeranim;
@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = IsGrounded();
+        isGroundedBool = IsGrounded();
 
-        if (isGrounded)
+        if (isGroundedBool)
         {
             canDoubleJump = true; // Reset double jump when grounded
 
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     }
     public void SetAnimations()
     {
-        if (moveX != 0)
+        if (moveX != 0 && isGroundedBool)
         {
             playeranim.SetBool("run", true);
         }
@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
         {
             playeranim.SetBool("run",false);
         }
+       
     }
 
     private void FlipSprite(float direction)
@@ -121,6 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 0); // Zero out vertical velocity
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        playeranim.SetTrigger("jump");
     }
 
     private bool IsGrounded()
@@ -139,8 +141,8 @@ public class PlayerController : MonoBehaviour
     }
     public void MobileJump()
     {
-        isGrounded = IsGrounded();
-        if (isGrounded)
+        isGroundedBool = IsGrounded();
+        if (isGroundedBool)
         {
             canDoubleJump = true; // Reset double jump when grounded
 
