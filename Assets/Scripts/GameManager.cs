@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private int coinCount = 0;
     public TMP_Text coinText;
+    public PlayerController playerController;
 
     private void Awake()
     {
@@ -26,5 +27,11 @@ public class GameManager : MonoBehaviour
     public void UpdateGUI()
     {
         coinText.text = coinCount.ToString();
+    }
+
+    public void Death()
+    {
+        Debug.Log("Died");
+        playerController.gameObject.SetActive(false);
     }
 }
