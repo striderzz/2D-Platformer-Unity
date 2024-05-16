@@ -7,6 +7,7 @@ public class pickup : MonoBehaviour
     public enum pickupType { coin,gem,health}
 
     public pickupType pt;
+    [SerializeField] GameObject PickupEffect;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,9 +16,27 @@ public class pickup : MonoBehaviour
             if(collision.gameObject.tag == "Player")
             {
                 GameManager.instance.IncrementCoinCount();
-                Destroy(this.gameObject);
+           
+                Instantiate(PickupEffect, transform.position, Quaternion.identity);
+
+                Destroy(this.gameObject,0.2f);
+                
             }
             
+        }
+
+        if (pt == pickupType.gem)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                GameManager.instance.IncrementGemCount();
+            
+                Instantiate(PickupEffect, transform.position, Quaternion.identity);
+
+                Destroy(this.gameObject, 0.2f);
+
+            }
+
         }
     }
 }

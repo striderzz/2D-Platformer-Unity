@@ -7,18 +7,14 @@ public class Events : MonoBehaviour
 {
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
+    }
+    public void Level()
+    {
+        SceneManager.LoadScene(1);
     }
     public void Quit()
     {
         Application.Quit();
-    }
-    public void ResetGame()
-    {
-        SceneManager.LoadScene("Level");
-    }
-    public void Level()
-    {
-        SceneManager.LoadScene("Level");
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8577905970109917546}
   m_Layer: 0
   m_Name: dollar
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pt: 0
+  PickupEffect: {fileID: 5746382810402386754, guid: ce32754ecbaea3342842e4a46df1e61a, type: 3}
 --- !u!61 &8577905970109917546
 BoxCollider2D:
   m_ObjectHideFlags: 0
