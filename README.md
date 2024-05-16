@@ -5,15 +5,15 @@ Create your own 2D platformer game with ease using this Unity project template. 
 ## Features:
 Tilemap Integration: Leverage Unity's Tilemap system for efficient level design and quick iteration.
 
-Player Controller: A customizable player controller script with smooth movement and responsive input handling.
+Player Controller: A customizable player controller script with smooth movement and double jump movement.
+
+Game Manager and UI Manager: Systems to manage gameplay.
+
+Player Death and Respawning: Respawn and death system.
 
 Platformer Mechanics: Jumping, double-jumping, and grounded movement are all set up for a classic platformer feel.
 
-Collision Detection: Precise and reliable collision detection is needed to ensure accurate interaction with the environment.
-
-Sample Levels: Explore example levels that showcase different platformer scenarios and challenges.
-
-Unity Physics Integration: Utilize Unity's physics engine for realistic interactions between game elements.
+Coins and Pickups: Coins and Pickups to make gameplay feel fun.
 
 ## Getting Started:
 Clone the repository.
